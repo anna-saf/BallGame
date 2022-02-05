@@ -5,17 +5,17 @@ using UnityEngine;
 public class Player
 {
     public SubscriptionProperty<GameState> gameState;
-    public SubscriptionProperty<int> gold;
+    public SubscriptionProperty<int> coins;
     public SubscriptionProperty<int> lives;
     public SubscriptionProperty<float> speedBall;
 
-    public Player(float speed, int gold = 0, int lives = 3)
+    public Player(float speed, int coins = 0, int lives = 3)
     {
         gameState = new SubscriptionProperty<GameState>();
-        this.gold = new SubscriptionProperty<int>();
+        this.coins = new SubscriptionProperty<int>();
         this.lives = new SubscriptionProperty<int>();
         speedBall = new SubscriptionProperty<float>();
-        this.gold.Value = gold;
+        this.coins.Value = coins;
         speedBall.Value = speed;
     }
 }

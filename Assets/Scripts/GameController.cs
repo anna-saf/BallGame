@@ -12,8 +12,6 @@ internal class GameController:BaseController
     private BallController _ballController;
     private LivesController _livesController;
     private CoinsCountController _coinsCountController;
-    private InputController _inputController;
-    //private MainCamController _mainCamController;
 
     
 
@@ -34,11 +32,9 @@ internal class GameController:BaseController
         AddController(_corridorController);
         _ballController = new BallController(_player, _placeForGame, _config, _mainCam);
         AddController(_ballController);
-       /* _mainCamController = new MainCamController(_player);
-        AddController(_mainCamController);*/
-        _livesController = new LivesController(_config, _placeForUI);
+        _livesController = new LivesController(_config, _placeForUI, _player);
         AddController(_livesController);
-        _coinsCountController = new CoinsCountController(_config, _placeForUI);
+        _coinsCountController = new CoinsCountController(_config, _placeForUI, _player);
         AddController(_coinsCountController);
     }
 }

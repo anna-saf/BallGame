@@ -4,6 +4,6 @@ public class Live:MonoBehaviour
 {
     public void OnDestroy()
     {
-        Object.Destroy(transform);
+        Object.Destroy(transform.gameObject);
     }
 }
