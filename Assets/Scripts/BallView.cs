@@ -26,7 +26,8 @@ public class BallView : MonoBehaviour
 
     public void HorizontalMove(float value)
     {
-        _ballRigit.AddForce(Vector3.right * value, ForceMode.Acceleration);
+        //_ball.transform.position = Vector3.MoveTowards(_ball.transform.position, new Vector3(Vector3.right.x * value, _ball.transform.position.y, _ball.transform.position.z), Time.deltaTime);
+        _ballRigit.AddForce(Vector3.right * value*0.5F, ForceMode.Acceleration);
     }
 
     /*    public void Init()

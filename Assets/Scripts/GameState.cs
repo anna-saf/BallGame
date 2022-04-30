@@ -2,5 +2,6 @@
 {
     None,
     Menu,
-    Game
+    Game,
+    GameOver
 }

@@ -12,15 +12,12 @@ public class RunGame : MonoBehaviour
     [SerializeField] private Transform _placeForGame;
     [SerializeField] private MainCamView _mainCam;
     private MainController _mainController;
-    private Player _player;
     private Config _config;
 
     private void Awake()
     {
         
         _config = new Config();
-        _player = new Player(_startSpeed, _startGold, _startLives);
-        _player.gameState.Value = GameState.Menu;
-        _mainController = new MainController(_placeForUI, _player, _config, _placeForGame, _mainCam);
+        _mainController = new MainController(_placeForUI, _startSpeed, _startGold, _startLives, _config, _placeForGame, _mainCam);
     }
 }

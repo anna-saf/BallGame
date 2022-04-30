@@ -30,6 +30,7 @@ public class LivesView:MonoBehaviour
     {
         _lives[0].OnDestroy();
         _lives.RemoveAt(0);
+        _player.gameState.Value = GameState.GameOver;
     }
 
     public void LeaveOneLive(int lives)
